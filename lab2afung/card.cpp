@@ -1,13 +1,15 @@
 /*
- * CSEN 79 Lab: Poker Statistics
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
+
 #include <iomanip>
 #include <iostream>
 #include "card.h"
 using namespace std;
 
 // Stand-alone Card definitions
-namespace csen79 {
+namespace lab2afung {
 
 	// initialize static const arrays
 	const char Card::Honors[] = {'J', 'Q','K', 'A'};

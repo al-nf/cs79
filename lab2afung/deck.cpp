@@ -1,5 +1,6 @@
 /*
- * CSEN 79 Lab: Poker Statistics
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #include <iomanip>
 #include <iostream>
@@ -11,7 +12,7 @@ using namespace std;
 #include "deck.h"
 
 // Deck class implementation
-namespace csen79 {
+namespace lab2afung {
 	// workhorse constructor
 	Deck::Deck(int g): next(0), guard(g) {
 		nCards = Deck::CARDS_PER_DECK;

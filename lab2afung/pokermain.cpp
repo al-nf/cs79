@@ -1,5 +1,6 @@
 /*
- * CSEN 79 Lab: Poker Statistics
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #include <ctime>
 #include <iomanip>
@@ -12,7 +13,7 @@
 #include "poker.h"
 
 using namespace std;
-using namespace csen79;
+using namespace lab2afung;
 
 // Generate one sample hand for each rank
 void pokerHands(Poker &poker) {

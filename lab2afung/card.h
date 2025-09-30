@@ -1,5 +1,6 @@
 /*
- * CSEN 79 Lab: Poker Statistics
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #ifndef CARD_H
 #define CARD_H
@@ -7,7 +8,7 @@
 // short hand to define static const varables
 
 // stand-alone Card class
-namespace csen79 {
+namespace lab2afung {
 	class Card {
 	public:
 	 	/* 

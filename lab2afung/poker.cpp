@@ -1,5 +1,6 @@
 /*
- * CSEN 79 Lab: Poker Statistics
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #include <iomanip>
 #include <iostream>
@@ -12,7 +13,7 @@
 
 using namespace std;
 
-namespace csen79 {
+namespace lab2afung {
 	const std::string Poker::RankNames[] = {
 		"High Card",	// 0
 		"Pair",			// 1

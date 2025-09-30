@@ -1,7 +1,8 @@
 /*
- * CSEN 79 Lab: Poker Statistics
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
-namespace csen79 {
+namespace lab2afung {
 	/*
 	 * Abstract one deck of playing cards, without Jokers.
 	 * "deal" function return the top of the deck.  It resuffles if

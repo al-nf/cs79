@@ -1,12 +1,13 @@
 /*
- * CSEN 79 Lab: Poker Statistics
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #ifndef POKER_H
 #define POKER_H
 #define uint unsigned int
 
 // 5-card Poker
-namespace csen79 {
+namespace lab2afung {
 	class Poker {
 	public:
 		// We play only 5-card poker

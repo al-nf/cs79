@@ -4,6 +4,11 @@
 
 # This is a Gnu compatible Makefile.  You can read the documentation online by searching Gnu Make
 # All coding projects must include a similar Makefile, named "Makefile".  See submission guidelines
+#
+# Name: Alan Fung
+# Email: afung@scu.edu
+#
+
 STD=-std=c++20
 OPT=-g
 CXXFLAGS=${STD} ${OPT}

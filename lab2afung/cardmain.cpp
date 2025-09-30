@@ -1,13 +1,13 @@
 /*
- * Name: Your Name
- * Email: Your email
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #include <iomanip>
 #include <iostream>
 #include "card.h"
 
 using namespace std;
-using namespace csen79;
+using namespace lab2afung;
 
 // Test program for Card
 int main(void) {

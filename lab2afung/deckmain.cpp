@@ -1,5 +1,6 @@
 /*
- * CSEN 79 Lab: Poker Statistics
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #include <iomanip>
 #include <iostream>
@@ -7,7 +8,7 @@
 #include "deck.h"
 
 using namespace std;
-using namespace csen79;
+using namespace lab2afung;
 
 // Test program for Deck class
 int main(void) {

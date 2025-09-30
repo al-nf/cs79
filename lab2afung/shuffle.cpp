@@ -1,6 +1,6 @@
 /*
- * Name: Your Name
- * Email: Your email
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #include <iostream>
 #include <stdlib.h>
@@ -8,7 +8,7 @@
 #include "card.h"
 #include "deck.h"
 
-namespace csen79 {
+namespace lab2afung {
 	// implement Fisher-Yates here
 	void Deck::shuffle(void) {
         Deck::next = 0;
