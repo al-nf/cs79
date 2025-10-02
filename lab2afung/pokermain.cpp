@@ -48,25 +48,37 @@ void pokerStats(Poker &poker) {
 	 * 
 	 * Output your stats then, with the amount of time it took you collect the stats.
 	 */
-    const int NUM_HANDS = 1e7;
-    int rank_counts[Poker::POKER_ARRAY_SIZE] = {0};
-
-    for (int i = 0; i < NUM_HANDS; ++i) {
-        poker.dealHand();
-        ++rank_counts[poker.rankHand()];
-    }
+    const int NUM_HANDS = 1e3;
+    const double EPSILON = 0.0000001;
     double mean = 0.0;
-    for (int i = 0; i < Poker::POKER_ARRAY_SIZE; ++i) {
-        cout << Poker::RankNames[i] << ": " << fixed << setprecision(3) << rank_counts[i]*1e2/NUM_HANDS << "%\n";
-        mean += rank_counts[i] * i;
-    }
-    mean /= NUM_HANDS;
+    int n = 0;
+    int rank_counts[Poker::POKER_ARRAY_SIZE] = {0};
+    while (true) {
+        n += NUM_HANDS;
+        double last_mean = mean;
 
+        for (int i = 0; i < NUM_HANDS; ++i) {
+            poker.dealHand();
+            ++rank_counts[poker.rankHand()];
+        }
+        mean = 0.0;
+        for (int i = 0; i < Poker::POKER_ARRAY_SIZE; ++i) {
+            mean += rank_counts[i] * i;
+        }
+        mean /= n;
+        if (abs(mean-last_mean) < EPSILON) {
+            break;
+        }
+    }
+
+    for (int i = 0; i < Poker::POKER_ARRAY_SIZE; ++i) {
+        cout << Poker::RankNames[i] << ": " << fixed << setprecision(3) << rank_counts[i]*1e2/n << "%\n";
+    }
     cout << "\nMean Rank: " << Poker::RankNames[(int)(mean+0.5)] << "\n";
     
 	tmark = clock() - tmark;	// stop the clock
     cout << "Time elapsed: " << (double)tmark/CLOCKS_PER_SEC * 1e3 << "ms\n";
-    cout << "Cards dealt: " << NUM_HANDS << "\n";
+    cout << "Cards dealt: " << n << "\n";
     return;
 }
 
