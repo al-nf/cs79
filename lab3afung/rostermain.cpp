@@ -13,11 +13,6 @@
 using namespace std;
 using namespace csen79;
 
-// Test code for class roster
-// Input file: <CMD> [ID] [FIRST LAST]
-// CMD : A | X | L
-// ID: 7-digit unsigned integer
-// FIRST, LAST: string
 int main() {
 	Roster r;
 	Person st;
@@ -26,16 +21,21 @@ int main() {
 
 	while (cin >> cmd) {
 		switch (cmd[0]) {
+
+        // adds a person with id, firstname, lastname to roster
 		case Command::Add:
             cin >> id >> first >> last;
             r.insert(Person(id, first, last));
 			break;
+
+        // removes a person with id from roster
 		case Command::Erase:
             cin >> id;
             r.erase(id);
 			break;
+
+        // lists the roster
 		case Command::Print:
-			// listing the entire roster with a rudimentary iterator
 			cout << "---- Current Roster ----"  << endl;
 			int i = 1;
 			for (auto st = r.begin(); st != r.end(); st = r.next(), i++)
