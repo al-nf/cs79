@@ -1,5 +1,6 @@
 /*
- * CSEN 79 Lab Sample Code
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #include <cstddef>
 #include <string>

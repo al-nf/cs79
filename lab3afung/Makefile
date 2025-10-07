@@ -1,9 +1,10 @@
-# CSEN 79
-# Lab 3 Makefile
+# Name: Alan Fung
+# Email: afung@scu.edu
+
 
 STD=-std=c++20
 OPT=-g
-CXXFLAGS=${STD} ${OPT}
+CXXFLAGS=${STD} ${OPT} 
 TARFLAGS=--no-mac-metadata
 
 %.o: %.cpp

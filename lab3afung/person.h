@@ -1,7 +1,6 @@
 /*
- * CSEN 79 Concrete Class
- * Plain Old Data Example
- * Person
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #ifndef PERSON_H
 #define PERSON_H

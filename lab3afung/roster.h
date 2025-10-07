@@ -1,6 +1,6 @@
 /*
- * CSEN 79 Lab3
- * Student Roster
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #ifndef ROSTER_H
 #define ROSTER_H
