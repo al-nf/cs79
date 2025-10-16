@@ -1,5 +1,6 @@
 /*
- * CSEN 79 Lab Sample Code
+ * Name: Alan Fung
+ * Email: afung@scu.edu
  */
 #include <string>
 #include <iostream>
@@ -24,6 +25,9 @@ namespace csen79 {
     }
 	bool RosterPtr::insert(const T &rec) {
         if (last >= capacity) {
+            if (capacity*2 < capacity) {
+                throw overflow_error("Capacity overflow!");
+            }
             T* temp_roster = new T[capacity*2];
             copy(roster, roster + capacity, temp_roster);
             delete[] roster;

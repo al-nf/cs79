@@ -1,4 +1,6 @@
-# Lab 4 Makefile
+# Name: Alan Fung
+# Email: afung@scu.edu
+
 
 STD=-std=c++20
 OPT=-g
