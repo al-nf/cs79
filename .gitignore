@@ -6,3 +6,4 @@
 !Makefile
 hw/
 *.pdf
+.vscode/
