@@ -9,6 +9,7 @@
 namespace coen79_lab5 {
     string::string(const char str[])
     {
+        assert(str[strlen(str)] == '\0');
         current_length = strlen(str);
         allocated = strlen(str) + 1;
         characters = new char[allocated];
@@ -53,6 +54,7 @@ namespace coen79_lab5 {
 
     void string::operator+=(const char addend[])
     {
+        assert(addend[strlen(addend)] == '\0');
         assert(characters[length()] == '\0' && length() < allocated);
         if (length() + strlen(addend) >= allocated) {
             allocated = length() + strlen(addend) + 1;
@@ -146,14 +148,7 @@ namespace coen79_lab5 {
     void string::replace(const string& source, unsigned int position)
     {
         assert(characters[length()] == '\0' && length() < allocated);
-        assert(position <= length());
-        if (source.length() + position >= allocated) {
-            allocated = source.length() + position + 1;
-            char* temp = new char[allocated];
-            strncpy(temp, characters, length());
-            delete[] characters;
-            characters = temp;
-        }
+        assert(position + source.length() <= length());
         strncpy(characters + position, source.characters, source.length());
         current_length = (position + source.length() > length()) ? (position + source.length()) : length();
         characters[length()] = '\0';
@@ -223,16 +218,7 @@ namespace coen79_lab5 {
 
     std::ostream& operator<<(std::ostream& outs, const string& source)
     {
-        outs << "\n";
-        for (size_t i = 0; i < source.allocated; ++i) {
-            outs << "[" << i << "] ";
-            if (source.characters[i] == '\0')
-                outs << "\\0";
-            else
-                outs << source.characters[i];
-            outs << "\n";
-        }
-        // outs << source.characters;
+        outs << source.characters;
         return outs;
     }
 
