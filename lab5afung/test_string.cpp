@@ -1,18 +1,13 @@
-// FILE: str_demo.cpp
-// This is a small demonstration program showing how the string class is used.
-//
-//  COEN 79
-//  --- Behnam Dezfouli, COEN, SCU ---
-//
-//
-
+/*
+ * Name: Alan Fung
+ * Email: afung@scu.edu
+ */
 #include "mystring.h" // Or use the Standard Library <string>
 #include <stdlib.h> // Provides EXIT_SUCCESS
 #include <iostream> // Provides cout and cin
 
 using std::cin;
 using std::cout;
-using std::endl;
 using namespace coen79_lab5;
 
 void test_addition_assignment(string& s1, string& s2, string& s3);

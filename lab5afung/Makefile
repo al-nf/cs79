@@ -1,3 +1,7 @@
+
+# Name: Alan Fung
+# Email: afung@scu.edu
+
 CC = g++
 DEMO = demo
 TEST = test
