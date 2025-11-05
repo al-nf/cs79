@@ -1,0 +1,6 @@
+rosterllist provides the implementation for a linked list, its nodes, and its iterator. So we would need to test the functionality of all these:
+1. Make a new list. (tests the list constructor)
+2. Insert a node into the list. (tests the node constructor and insert)
+3. Insert multiple nodes into the list. (tests insert)
+4. Delete multiple nodes from the list. (tests erase)
+5. Iterate through the list, printing out the contents of its nodes. (tests iterator and its functions)
