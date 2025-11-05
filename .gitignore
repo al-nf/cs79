@@ -7,4 +7,4 @@
 hw/
 *.pdf
 .vscode/
-.dSYM
+*.dSYM/
