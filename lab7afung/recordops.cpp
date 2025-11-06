@@ -7,16 +7,11 @@
 #include "record.h"
 
 namespace csen79 {
-    bool Record::operator==(const std::tm& birth) const {
-        return this->birth.tm_year == birth.tm_year &&
-            this->birth.tm_mon  == birth.tm_mon &&
-            this->birth.tm_mday == birth.tm_mday;
-    }
-
     bool Record::operator==(int month) const {
         return (this->birth.tm_mon + 1) == month;
     }
 
+    // == has to take only one argument
     bool Record::operator==(const std::string& firstlast) const {
         return (first + " " + last) == firstlast;
     }
@@ -29,6 +24,7 @@ namespace csen79 {
         return this->last < other.last;
     }
 
+    // helper for functor
     bool BMIless(const Record &lh, const Record &rh) {
         return lh.getBMI() < rh.getBMI();
     }

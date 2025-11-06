@@ -39,12 +39,16 @@ int main() {
         it = std::find(it, records.end(), 3);
     }
 
-    it = std::find(records.begin(), records.end(), "LilyLiu");
-    cout << "\nFound Lily Liu:" << *it << endl;
+    it = std::find(records.begin(), records.end(), "Lily Liu");
+    if (it != records.end()) {
+        cout << "\nFound Lily Liu: " << *it << endl;
+    } else {
+        cout << "\nLily Liu not found\n";
+    }
 
     i = 0;
     sort(records.begin(), records.end());
-	cout << "\nSorted by height:\n";
+	cout << "\nSorted by last name alphabetically:\n";
 	for (auto r : records) {
 		cout << i++ << ": " <<  r << endl;
     }
